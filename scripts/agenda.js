@@ -67,6 +67,13 @@ const renderCalendar = () => {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
+
+  /*for (var i = 0; i < monthDays.children.length; i++){
+    var child = monthDays.children[i];
+    monthDays.children[i].addEventListener("click", function(event) {
+      console.log(event.target.innerHTML);
+    });
+  }*/
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -79,4 +86,25 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
+document.querySelector(".days").addEventListener("click", (event) => {
+  console.log('event', event);
+  console.log('event', event.target.textContent);
+  selectedDate(event.target.textContent)
+});
+
 renderCalendar();
+
+function selectedDate(date){
+  var selectedMonth = document.querySelector(".date h1").innerHTML;
+  var selectedDate = document.getElementsByClassName("days");
+  console.log(selectedDate);
+  console.log(selectedMonth);
+  console.log('Selecciono el día: ', date);
+  console.log('Selecciono el mes: ', selectedMonth);
+  document.querySelector(".agendamiento span").innerHTML = date;
+}
+
+
+
+
+
