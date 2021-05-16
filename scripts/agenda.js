@@ -99,8 +99,10 @@ document.querySelector(".days").addEventListener("click", (event) => {
     this.hora = hora;
   }
   var agenda1 = new Agenda (d,nombre,'18:00');
+  alert("Se agendo correctamente!");
   agendamiento.push(agenda1);
   console.log(agendamiento);
+  
 });
 
 renderCalendar();
