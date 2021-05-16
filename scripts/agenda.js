@@ -86,10 +86,21 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
+var agendamiento = [];
+
 document.querySelector(".days").addEventListener("click", (event) => {
   console.log('event', event);
   console.log('event', event.target.textContent);
-  selectedDate(event.target.textContent)
+  var nombre= prompt("Please enter your name", nombre);
+  var d = selectedDate(event.target.textContent);
+  function Agenda(fecha, nombre, hora) {
+    this.fecha = fecha;
+    this.nombre = nombre;
+    this.hora = hora;
+  }
+  var agenda1 = new Agenda (d,nombre,'18:00');
+  agendamiento.push(agenda1);
+  console.log(agendamiento);
 });
 
 renderCalendar();
@@ -102,7 +113,13 @@ function selectedDate(date){
   console.log('Selecciono el día: ', date);
   console.log('Selecciono el mes: ', selectedMonth);
   document.querySelector(".agendamiento span").innerHTML = date;
+  return date;
 }
+
+
+
+
+
 
 
 
