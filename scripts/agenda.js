@@ -102,10 +102,11 @@ document.querySelector(".days").addEventListener("click", (event) => {
   alert("Se agendo correctamente!");
   agendamiento.push(agenda1);
   console.log(agendamiento);
-  
+  drawAgenda4Date(agenda1);
 });
 
 renderCalendar();
+
 
 function selectedDate(date){
   var selectedMonth = document.querySelector(".date h1").innerHTML;
@@ -118,11 +119,23 @@ function selectedDate(date){
   return date;
 }
 
+function drawAgenda4Date(agenda){
+  $("#agendamiento-dia").html("");
+  agendamiento.forEach(agendaDate => {
+    if (agenda.fecha == agendaDate.fecha){
+      addRowToAgendaTable($("#agendamiento-dia"), agenda);
+    }
+  });
+}
 
-
-
-
-
+function addRowToAgendaTable(agendaTable, agenda){
+  var tr;
+  tr = $('<tr/>');
+  tr.append("<td>" + agenda.fecha + "</td>");
+  tr.append("<td>" + agenda.nombre + "</td>");
+  tr.append("<td>" + agenda.hora + "</td>");
+  agendaTable.append(tr);
+}
 
 
 
