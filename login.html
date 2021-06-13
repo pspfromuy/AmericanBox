@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/a450698ac3.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts/ajaxtest.js"></script>
     <title>American Box</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
         </div>   
 
         <div class="login-container">
-            <form action="/action_page.php">
+            <form>
                 <div class="row">
                     <h2 style="text-align:center">Login with Social Media or Manually</h2>
           
@@ -47,11 +49,11 @@
                             <p>Or sign in manually:</p>
                         </div>
             
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <input type="submit" value="Login">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <input type="submit" id="submit" value="Login">
                     </div>
-          
+                    
                 </div>
             </form>
         </div>
