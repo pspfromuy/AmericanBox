@@ -10,9 +10,6 @@
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/background.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
 }
 
 .navbar {
@@ -59,55 +56,6 @@ p {
     font-size: 11px;
     line-height: 15px;
 }
-
-.nosotros-section {
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-.row{
-    justify-content: center;
-}
-
-.column {
-    float: left;
-    width: 30%;
-    margin-bottom: 15px;
-  }
-  
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px;
-}
-.card img {
-    height: 300px;
-    width: 300px;
-}
-
-.card-container title {
-    color: grey;
-}
-.card-container button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-.card-container button:hover {
-    background-color: #555;
-}
-.card-container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
- 
 
 .social-links {
     position: fixed;
