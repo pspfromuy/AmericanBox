@@ -1,0 +1,35 @@
+@import url(_variables.scss);
+
+.navbar {
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    transition: transform 0.5s;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+nav .active {
+    text-decoration: underline;
+}
+nav li:hover {
+    transform: scale(1.1);
+    font-weight: 800;
+}
